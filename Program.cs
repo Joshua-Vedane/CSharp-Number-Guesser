@@ -12,18 +12,10 @@ namespace NumberGuesser
         static void Main(string[] args)
         {
             GetAppInfo(); // Run GetAppInfo function to get info
-
             GreetUser(); // Ask for user's name and greet them
-
             while (true)
             {
-
-
-
-                // Set correct number
-                //int correctNumber = 7;
-
-                //Create a new Random object
+                //Create a new Random number object
                 Random random = new Random();
                 int correctNumber = random.Next(1, 10);
 
@@ -116,7 +108,5 @@ namespace NumberGuesser
           Console.WriteLine(message);
           Console.ResetColor();
         }
-
-
     }
 }
