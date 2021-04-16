@@ -48,6 +48,8 @@ namespace NumberGuesser
                     {
                       // Print Error Message 
                       PrintColorMessage(ConsoleColor.Red, "Wrong Number, please try again.");
+                      // Print Hint 
+                      PrintHint(guess, correctNumber);
                     }
                 }
 
@@ -107,6 +109,15 @@ namespace NumberGuesser
           Console.ForegroundColor = color;
           Console.WriteLine(message);
           Console.ResetColor();
+        }
+
+        // Print Hint
+        static void PrintHint(int guess, int correctNumber){
+          if(guess > correctNumber){
+            PrintColorMessage(ConsoleColor.DarkYellow, "You're guess was too high.");
+          }else {
+            PrintColorMessage(ConsoleColor.DarkYellow, "You're guess was too low.");
+          }
         }
     }
 }
